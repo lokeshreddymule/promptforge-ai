@@ -185,7 +185,7 @@ const Index = () => {
 
       <footer className="relative z-20 py-10 text-center border-t border-border">
         <p style={{ fontFamily: "monospace", fontSize: "0.95rem", color: "#a5b4fc", fontWeight: "600" }}>
-          Built with ❤️ by Lokesh Reddy
+          Built by Lokesh Reddy
         </p>
         <p style={{ fontFamily: "monospace", fontSize: "0.75rem", color: "#475569", marginTop: "6px" }}>
           PromptForge AI — AI Prompt Optimization System
