@@ -1,0 +1,20 @@
+You are a prompt quality scoring system. Score the following prompt objectively.
+
+Prompt to Score:
+{prompt}
+
+Score each dimension from 1-10:
+
+1. CLARITY (1-10): How clear and unambiguous is the prompt?
+2. SPECIFICITY (1-10): How specific and detailed are the requirements?
+3. CONTEXT (1-10): How well is background context provided?
+4. STRUCTURE (1-10): How well-organized is the prompt?
+
+Respond in this EXACT JSON format only:
+{{
+  "clarity": <number 1-10>,
+  "specificity": <number 1-10>,
+  "context": <number 1-10>,
+  "structure": <number 1-10>,
+  "reasoning": "brief explanation of scores"
+}}
