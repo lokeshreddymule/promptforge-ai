@@ -18,7 +18,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy React frontend and build it
 COPY forge-spark-alchemy-main/forge-spark-alchemy-main/package.json ./frontend/
-COPY forge-spark-alchemy-main/forge-spark-alchemy-main/package-lock.json ./frontend/
 WORKDIR /app/frontend
 RUN npm install
 
@@ -35,13 +34,10 @@ COPY memory/ ./memory/
 COPY prompts/ ./prompts/
 COPY utils/ ./utils/
 COPY app.py .
-COPY api_bridge.py .
+COPY render_server.py .
 
 # Copy built React files to be served by FastAPI
 RUN cp -r /app/frontend/dist ./static
-
-# Update api_bridge to serve static files
-COPY render_server.py .
 
 # Expose port
 EXPOSE 10000
